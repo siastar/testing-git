@@ -1,0 +1,39 @@
+1 git is a thing
+2 github is another thing
+
+---------- git:
+
+in order to initiate a git project
+- enter the root projectt folder
+- run
+
+---------------------------- terminal--------------------------------------------
+
+$ git init
+Initialized empty Git repository in /actual-path-to-project-folder/.git/
+
+---------------------------------------------------------------------------------
+
+even if files are aòready present in the folder the init returns empty folder
+the files to monitor must be added.
+in order to add all the files in the folder:
+
+---------------------------- terminal--------------------------------------------
+
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	#notes_about_git.txt#
+	.#notes_about_git.txt
+	index.html
+	notes_about_git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+---------------------------------------------------------------------------------
