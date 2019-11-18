@@ -124,29 +124,41 @@
 
 <body>
 
-	<header id="header"><p>Header...</p></header>
+	<header id="header"><p>https://www.digitalocean.com/community/tutorials/how-to-use-git-effectively</p></header>
 
 	<div id="container">
 
 		<main id="center" class="column">
 			<article>
 			
-			  <h1>Git Command List</h1>
+			  <h3>Git Command List</h3>
 			  <br/>
 				<p> first you need to tell git that you want to use your current directory as a git environment.</p>
-				<p> <b>user@host ~/git/testing $ git init </b> </p>
+				<p> <b>user@host:~/path/to/project$ git init </b> </p>
 				<p> output: <b>Initialized empty Git repository in /home/path/to/project/</b> </p>
                           <br/>      
 				
 				<p> Once your have initialized your new empty repository, you can add your files.</p>
 				<p> The following will add all files and directories to your newly created repository: </p>
-				<p> <b>user@host ~/git/testing $ git add . </b> </p>
+				<p> <b>user@host:~/path/to/project$ git add . </b> </p>
 				<p> output: <b>No output is good </b></p>
                           <br/>      
 				
-				<p>
-				 ....
-				</p>
+				<p> </p>
+				<p> when you want to <b>"fix"</b> modifies you need to <b>"create a commit"</b></p>
+				<p> the commit must be marked with a comment which describes the modifies </p>
+			        <p> <b>user@host:~/path/to/project$ git commit -m "describe what you did" -a </b> </p>
+			        <p> output: (something similar)</p>
+			        <p> <b>[master (root-commit) 1b830f8] initial commit </b></p>
+			        <p> <b>0 files changed</b></p>
+			        <p> <b>create mode 100644 file</b></p>
+				<br/>
+				<p>parameters:</p>
+				<p> -m, expects a commit message like: "describe what you did"</p>
+			        <p> -a, applies the commit message to all the modified files</p>
+
+			  
+                          <br/>      
 
 				<p>
 				   ....
