@@ -157,7 +157,7 @@
 			          <b>-a</b>, applies the commit message to all the modified files
 			          -------------
 			          evantually it is possible to commit specific files or directories by appending their names like:
-			          <b>user@host:~/path/to/project$ git commit -m "describe what you did" file1.js file2.html src ... index.css  </b> 
+			          <b>user@host:~/path/to/project$ git commit -m "describe what you did" stuff.js home.html src home.css etc... </b> 
 
 				  at this point we need to <b>create a repository on github</b>:
 				  enter your own profile and click on "+" icon in the upper right corner
@@ -167,10 +167,16 @@
 				  need the link to our repository, there are 2 ways, both from the repo panel in github:
 				  1) https link:<b>https://github.com/githubuser/project-name.git</b>
 				  2) ssh: <b>git@github.com:githubuser/project-name</b>
-				
-			        </pre>
+				  
+				  at this point it is possible to "connect" our local project with github creating a "remote"
+				  <b>user@host:~/path/to/project$ git remote add origin ssh://git@github.com:githubuser/project-name.git</b>
+				  The first command adds a remote, called "origin", and sets the URL to
+				  <b>ssh://git@github.com:githubuser/project-name.git</b>
 
-				
+				  now is time to push our software to our repo:
+				  <b>user@host:~/path/to/project$ git push origin master</b>
+				</pre>
+
 			</article>								
 		</main>
 
