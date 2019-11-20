@@ -14,7 +14,7 @@ Initialized empty Git repository in /actual-path-to-project-folder/.git/
 
 ---------------------------------------------------------------------------------
 
-even if files are aòready present in the folder the init returns empty folder
+even if files are already present in the folder the init returns empty folder
 the files to monitor must be added.
 
 check the git status:
@@ -67,3 +67,8 @@ $ git commit -m "today I start to use git - this is my first commit"
  create mode 100644 index.html
 
 ---------------------------------------------------------------------------------
+
+
+git config --global user.name 'user name'
+
+git config --global user.name 'user name'

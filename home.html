@@ -124,58 +124,89 @@
 
 <body>
 
-	<header id="header"><p>this is an html template...</p></header>
+ <header id="header"><p>this is an html template...</p></header>
 
-	<div id="container">
+ <div id="container">
 
-		<main id="center" class="column">
-			<article>
+  <main id="center" class="column">
+    <article>
 			
-			  <h3>Git Command List</h3>
-			  <h5>https://www.digitalocean.com/community/tutorials/how-to-use-git-effectively</h5>
-			  
-			  <br/>
-			        <pre>
-				  first you need to tell git that you want to use your current directory as a git environment.
-				  <b>user@host:~/path/to/project$ git init </b> 
-				  output: <b>Initialized empty Git repository in /home/path/to/project/</b> 
-
-				  Once your have initialized your new empty repository, you can add your files.
-				  The following will add all files and directories to your newly created repository: 
-				  <b>user@host:~/path/to/project$ git add . </b> 
-				  output: <b>No output is good </b>
-
-				  when you want to <b>"fix"</b> modifies you need to <b>"create a commit"</b>
-				  the commit must be marked with a comment which describes the modifies: 
-			          <b>user@host:~/path/to/project$ git commit -m "describe what you did" -a </b> 
-			          output: (something similar)
-			          <b>[master (root-commit) 1b830f8] initial commit </b>
-			          <b>0 files changed</b>
-			          <b>create mode 100644 file</b>
-				  parameters:
-				  <b>-m</b>, expects a commit message like: "describe what you did"
-			          <b>-a</b>, applies the commit message to all the modified files
-			          -------------
-			          evantually it is possible to commit specific files or directories by appending their names like:
-			          <b>user@host:~/path/to/project$ git commit -m "describe what you did" stuff.js home.html src home.css etc... </b> 
-
-				  at this point we need to <b>create a repository on github</b>:
-				  enter your own profile and click on "+" icon in the upper right corner
-			          you will be required to chose a repository name, that must be something like
-			  	  <b>this-is-the-repository-name</b> and then an optional description.
-				  Once the repository is created we may want to push our project on github, to do this we
-				  need the link to our repository, there are 2 ways, both from the repo panel in github:
-				  1) https link:<b>https://github.com/githubuser/project-name.git</b>
-				  2) ssh: <b>git@github.com:githubuser/project-name</b>
+    <h3>Git Command List</h3>
+    <br/>
+     <pre>
+     -------------------------------------------------------------------------------------------
 				  
-				  at this point it is possible to "connect" our local project with github creating a "remote"
-				  <b>user@host:~/path/to/project$ git remote add origin ssh://git@github.com:githubuser/project-name.git</b>
-				  The first command adds a remote, called "origin", and sets the URL to
-				  <b>ssh://git@github.com:githubuser/project-name.git</b>
+       <b>git config --global user.name 'user name'</b>
+       <b>git config --global user.name 'user name'</b>
 
-				  now is time to push our software to our repo:
-				  <b>user@host:~/path/to/project$ git push origin master</b>
-				</pre>
+	 <h3>local file management</h3>
+	 -------------------------------------------------------------------------------------------
+	 to initiate a git instance in the project folder
+	 <b>$ git init </b>
+	 -------------------------------------------------------------------------------------------
+	 to add a single file to the staged area (tracked files list)
+	 <b>$ git add filename.xyz</b>
+	 -------------------------------------------------------------------------------------------
+	 to check what is in the staged area
+	 <b>$ git status</b>
+	 -------------------------------------------------------------------------------------------
+	 to unstage a single file
+	 <b>$ git rm --cached filename.xyz</b>
+	 -------------------------------------------------------------------------------------------
+	 to stage files by extension
+	 <b>$ git add *.xyz</b>
+	 and therefore, to unstage files by extension
+	 <b>$ git rm --cached *.xyz</b>
+	 -------------------------------------------------------------------------------------------
+	 to add anything
+	 <b>$ git add .</b> (yes, it's a dot)
+	 -------------------------------------------------------------------------------------------
+	 to commit changes
+	 <b>$ git commit -m "describe what you did" -a</b> ('a' applies the comment to all committed files)
+	 -------------------------------------------------------------------------------------------
+	 to permanently exclude files from <b>git add .</b>
+	 just create a file called <b>.gitignore</b> and fill it with what you want to exclude
+ 
+	 <b>
+	   filename.xyz
+	   /FolderOne
+	   /FolderTwo/filename.xyz
+	   *.xyz
+	   /FolderThree/*.xyz
+	   whatever.123
+	  </b>
+	 -------------------------------------------------------------------------------------------
+  	 to create a new project's branch
+
+	 <b>$ git branch NewBranchName</b>
+	 -------------------------------------------------------------------------------------------
+	 to switch to a specific branch
+
+	 <b>$ git checkout BranchName</b>
+	 -------------------------------------------------------------------------------------------
+	 to switch back to the master branch
+	 
+	 <b>$ git checkout master</b>
+	 -------------------------------------------------------------------------------------------
+	 to merge branch to master
+
+	 <b>$ git merge -m "describe what you're merging and convince me I should not terminate you right now"</b>
+	 -------------------------------------------------------------------------------------------
+
+	 <h3>pushing stuff to some github account repositories</h3>
+
+  	 -------------------------------------------------------------------------------------------
+	 to return a list of remote repos
+	 <b>$ git remote</b>
+	 -------------------------------------------------------------------------------------------
+	 to add a remote existing github repo
+	 <b>$ git remote add origin https://github.com/username/repositoryname.git</b>
+ 	 -------------------------------------------------------------------------------------------
+	 to push files to remote existing github repo (that you already added to project with git remote add)
+	 <b>$ git remote add origin https://github.com/username/repositoryname.git</b>
+ 	 -------------------------------------------------------------------------------------------
+	 
+     </pre>
 
 			</article>								
 		</main>
